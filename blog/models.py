@@ -1,3 +1,4 @@
+# filepath: /workspace/django-blog/blog/models.py
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -31,6 +32,7 @@ class Comment(models.Model):
     body = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
+    challenge = models.SlugField(default=3.0)
 
     class Meta:
         ordering = ["created_on"]
