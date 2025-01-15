@@ -6,10 +6,10 @@ from .models import Post
 
 
 class PostList(generic.ListView):
-    model = Post
+    
     queryset = Post.objects.filter(status=1)
     template_name = "blog/index.html"
-    paginate_by = 3
+    paginate_by = 6
     
 def post_detail(request, slug):
     """
@@ -24,17 +24,7 @@ def post_detail(request, slug):
 
     :template:`blog/post_detail.html`
     """
-
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
-    
-    return render(
-        request,
-        "blog/post_detail.html",
-        {"post": post,},
-    )
+    return render(request, "blog/post_detail.html", {"post": post},)
 
-# Add the about_view function here
-def about_view(request):
-    about_content = About.objects.first()
-    return render(request, 'about_page/about.html', {'about': about_content})
