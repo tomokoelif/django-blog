@@ -33,3 +33,8 @@ def post_detail(request, slug):
         "blog/post_detail.html",
         {"post": post,},
     )
+
+# Add the about_view function here
+def about_view(request):
+    about_content = About.objects.first()
+    return render(request, 'about_page/about.html', {'about': about_content})
