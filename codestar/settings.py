@@ -92,8 +92,9 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.parse(os.environ.get("postgresql://neondb_owner:EBXYydsU87mQ@ep-withered-block-a2hkfsdw.eu-central-1.aws.neon.tech/vice_write_poet_756760"))
 }
+
 
 CSRF_TRUSTED_ORIGINS = [
     "https://'8000-nielmc-django-project-0kylrta3cs.us2.codeanyapp.com','127.0.0.1",
