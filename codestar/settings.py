@@ -27,11 +27,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-nielmc-django-project-0kylrta3cs.us2.codeanyapp.com','127.0.0.1',
-    '.herokuapp.com','my-project-hello-blog-da3e0324805e.herokuapp.com'
+    '.herokuapp.com','my-project-hello-blog-da3e0324805e.herokuapp.com',
+    '8000-tomokoelif-djangoblog-puxnpyr0rdt.ws.codeinstitute-ide.net',
 ]
 # Application definition
 
